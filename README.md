@@ -14,3 +14,6 @@ Downloads pages from ABC Recipes and converts them to PDF. Good for uploading to
 Input: [Spicy stovetop beans with eggs and feta](https://www.abc.net.au/news/2025-06-02/easy-spicy-stovetop-beans-with-eggs/105259770) recipe on ABC Recipes website.
 
 Output: [Spicy stovetop beans with eggs and feta](spicy-stovetop-beans-with-eggs-and-feta.pdf) recipe as a PDF
+
+## Attribution
+All recipes remain copyright of their respective authors. Respect their work and don't distribute without permission.
