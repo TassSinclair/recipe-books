@@ -7,9 +7,9 @@
     
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Tass Sinclair",
   "license": "ISC",
-  "description": "",
+  "description": "Download recipes from ABC and convert them for offline use",
   "dependencies": {
     "puppeteer": "^24.10.2"
   }

@@ -1,6 +1,6 @@
 # Recipe Books
 
-Downloads pages from ABC Recipes and converts them to PDF. Good for uploading to an e-book reader.
+Download recipes from ABC and convert them for offline use. Good for uploading to an e-book reader.
 
 ## How?
 - Pull down an index of ABC articles from the "Recipe" topic, filters by "Recipe" tag.
