@@ -1,4 +1,4 @@
-# Recipe Books
+# Recipe Book
 
 Download recipes from ABC and convert them for offline use. Good for uploading to an e-book reader.
 
