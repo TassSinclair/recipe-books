@@ -41,16 +41,19 @@ async function recipeToPdf(base, url) {
 const recipeTopic = "2078"
 const window = 1000; 
 const base = "https://www.abc.net.au";
+const hasRecipeTag = (article) => article.tags.some(tag => tag.title == "Recipe")
 
 const total = 20; // there's supposedly 10,000 or so?
+
 
 for(let i = 0; i < Math.ceil(total/window); ++i) {
   const offset = i * window;
   const size = Math.min(window, total - offset);
   const indexer = `${base}/news-web/api/loader/topicstoriesmore?documentId=${recipeTopic}&offset=${offset}&size=${size}`;
   console.info(`indexing from ${indexer}`)
+
   const page = await (await fetch(indexer)).json()
-  for (const url of page.collection.filter(article => article.tags.some(tag => tag.title == "Recipe")).map(it => it.link)) {
+  for (const url of page.collection.filter(hasRecipeTag).map(it => it.link)) {
     await recipeToPdf(base, url)
   }
 }  
