@@ -39,12 +39,14 @@ async function recipeToPdf(base, url) {
 }
 
 const recipeTopic = "2078"
-const total = 1000; // out of like 10,000 or so?
+const window = 1000; 
 const base = "https://www.abc.net.au";
 
-for(let i = 0; i < Math.ceil(total/1000); ++i) {
-  const offset = i * 1000;
-  const size = Math.min(1000, total - offset);
+const total = 20; // there's supposedly 10,000 or so?
+
+for(let i = 0; i < Math.ceil(total/window); ++i) {
+  const offset = i * window;
+  const size = Math.min(window, total - offset);
   const indexer = `${base}/news-web/api/loader/topicstoriesmore?documentId=${recipeTopic}&offset=${offset}&size=${size}`;
   console.info(`indexing from ${indexer}`)
   const page = await (await fetch(indexer)).json()
