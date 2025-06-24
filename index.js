@@ -39,7 +39,7 @@ async function recipeToPdf(base, url) {
 }
 
 const recipeTopic = "2078"
-const total = 1000; // up to 1000
+const total = 1000; // out of like 10,000 or so?
 const base = "https://www.abc.net.au";
 
 for(const i = 0; i < Math.ceil(total/1000); ++i) {
